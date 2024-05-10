@@ -366,6 +366,7 @@ export default Services;
     - Windows : rd /s /q .git
       Windows commands were shared by students and I have not personally tested them.
   - setup new repo
+
     - git init
       create an empty git repository
     - git add
@@ -381,6 +382,11 @@ export default Services;
       git remote add origin git@github.com:your-profile/repo-name.git
       git branch -M main
       git push -u origin main --force
+
+      VTS NOTE: if git push failed, then do this:
+      ssh-keygen -t ed25519 -C "your_email@example.com"
+      (it will generate several files, probably in: C:\Users\<user>\.ssh directory)
+      goto github, settings,
 
 #### Benefits
 
