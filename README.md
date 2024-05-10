@@ -383,10 +383,18 @@ export default Services;
       git branch -M main
       git push -u origin main --force
 
-      VTS NOTE: if git push failed, then do this:
+      !!! VTS NOTE: if git push failed, then do this:
       ssh-keygen -t ed25519 -C "your_email@example.com"
       (it will generate several files, probably in: C:\Users\<user>\.ssh directory)
-      goto github, settings,
+      goto github, settings, SSH and GPG Keys -> New SSH Key (green button) -> paste content of c:\Users\<user>\.ssh\<your_key>.pub
+      then run following command: git push origin master --force
+
+      To publish with netlify:
+      add following into package.json file under dependencies & make sure not eslint warnings
+      "dependencies": {
+      ...
+      "@babel/plugin-proposal-private-property-in-object": "^7.21.0",
+      }
 
 #### Benefits
 
